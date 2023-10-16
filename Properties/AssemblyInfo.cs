@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Spicetify app")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Spicetify Installer")]
+[assembly: AssemblyDescription("Easy to use Spicetify installer")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Spicetify app")]
+[assembly: AssemblyCompany("Spicetify")]
+[assembly: AssemblyProduct("Spicetify Installer")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
