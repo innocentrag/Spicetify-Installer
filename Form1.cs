@@ -24,11 +24,9 @@ namespace Spicetify_app
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             string localAppDataPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-            // Check if Spicetify installation directories exist in AppData and LocalAppData
             bool isInstalled = Directory.Exists(Path.Combine(appDataPath, "spicetify")) &&
                               Directory.Exists(Path.Combine(localAppDataPath, "spicetify"));
 
-            // Enable or disable buttons and update their text based on installation status
             InstallBTN.Enabled = true;
             UninstallBTN.Enabled = isInstalled;
             InstallBTN.Text = isInstalled ? "Repair" : "Install";
@@ -69,15 +67,12 @@ namespace Spicetify_app
                 process.Close();
             });
 
-            // Ensure "Success" is set after the installation process is complete
             installationForm.LoadingTimer.Enabled = false;
             installationForm.SetInstallationStatus("Success");
             installationForm.EnableOkButton();
 
-            // Stop the timer
             installationForm.StopTimer();
 
-            // Re-enable the Install button and handle the InstallationComplete event
             installationForm.InstallationComplete += (s, args) => {
                 installationForm.Close();
                 CheckSpicetifyInstallation();
@@ -121,15 +116,12 @@ namespace Spicetify_app
                 process.Close();
             });
 
-            // Ensure "Success" is set after the uninstallation process is complete
             installationForm.LoadingTimer.Enabled = false;
             installationForm.SetInstallationStatus("Success");
             installationForm.EnableOkButton();
 
-            // Stop the timer
             installationForm.StopTimer();
 
-            // Re-enable the Uninstall button and handle the InstallationComplete event
             installationForm.InstallationComplete += (s, args) => {
                 installationForm.Close();
                 CheckSpicetifyInstallation();

@@ -22,7 +22,7 @@ namespace Spicetify_app
         {
             InitializeComponent();
             loadingTimer = new Timer();
-            loadingTimer.Interval = 500; // Change the interval as needed
+            loadingTimer.Interval = 500;
             loadingTimer.Tick += timer1_Tick;
         }
 
@@ -35,20 +35,18 @@ namespace Spicetify_app
         {
             if (status == "Success")
             {
-                loadingTimer.Enabled = false; // Disable the timer when status is "Success"
+                loadingTimer.Enabled = false;
             }
             statusLabel.Text = status;
         }
 
         public void ShowOkButton()
         {
-            // Show the OK button
             okButton.Enabled = false;
         }
 
         public void EnableOkButton()
         {
-            // Enable the OK button
             okButton.Enabled = true;
         }
 
