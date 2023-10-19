@@ -8,6 +8,7 @@ using System.Net;
 using System.Linq;
 using System.Net.Http;
 using System.IO.Compression;
+using Spicetify_Installer;
 
 namespace Spicetify_app
 {
@@ -33,7 +34,7 @@ namespace Spicetify_app
             UninstallBTN.Text = isInstalled ? "Uninstall" : "Uninstalled";
         }
 
-        private async void InstallBTN_Click(object sender, EventArgs e)
+        public async void InstallBTN_Click(object sender, EventArgs e)
         {
             InstallBTN.Enabled = false;
             InstallationForm installationForm = new InstallationForm();
@@ -81,11 +82,11 @@ namespace Spicetify_app
             };
         }
 
-        private async void UninstallBTN_Click(object sender, EventArgs e)
+        public async void UninstallBTN_Click(object sender, EventArgs e)
         {
             UninstallBTN.Enabled = false;
-            InstallationForm installationForm = new InstallationForm();
-            installationForm.Show();
+            UninstallationForm uninstallationForm = new UninstallationForm();
+            uninstallationForm.Show();
             this.Hide();
 
             await Task.Run(() =>
@@ -116,14 +117,14 @@ namespace Spicetify_app
                 process.Close();
             });
 
-            installationForm.LoadingTimer.Enabled = false;
-            installationForm.SetInstallationStatus("Success");
-            installationForm.EnableOkButton();
+            uninstallationForm.LoadingTimer.Enabled = false;
+            uninstallationForm.SetInstallationStatus("Success");
+            uninstallationForm.EnableOkButton();
 
-            installationForm.StopTimer();
+            uninstallationForm.StopTimer();
 
-            installationForm.InstallationComplete += (s, args) => {
-                installationForm.Close();
+            uninstallationForm.UninstallationComplete += (s, args) => {
+                uninstallationForm.Close();
                 CheckSpicetifyInstallation();
                 this.Show();
                 UninstallBTN.Enabled = true;

@@ -1,6 +1,6 @@
-﻿namespace Spicetify_app
+﻿namespace Spicetify_Installer
 {
-    partial class InstallationForm
+    partial class UninstallationForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InstallationForm));
-            this.statusLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UninstallationForm));
             this.okButton = new Siticone.UI.WinForms.SiticoneGradientButton();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.siticoneElipse1 = new Siticone.UI.WinForms.SiticoneElipse(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.siticoneDragControl1 = new Siticone.UI.WinForms.SiticoneDragControl(this.components);
             this.siticoneDragControl2 = new Siticone.UI.WinForms.SiticoneDragControl(this.components);
             this.SuspendLayout();
-            // 
-            // statusLabel
-            // 
-            this.statusLabel.AutoSize = true;
-            this.statusLabel.BackColor = System.Drawing.Color.Transparent;
-            this.statusLabel.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.statusLabel.ForeColor = System.Drawing.Color.LightGray;
-            this.statusLabel.Location = new System.Drawing.Point(12, 9);
-            this.statusLabel.Name = "statusLabel";
-            this.statusLabel.Size = new System.Drawing.Size(127, 33);
-            this.statusLabel.TabIndex = 0;
-            this.statusLabel.Text = "Installing";
             // 
             // okButton
             // 
@@ -67,11 +55,23 @@
             this.okButton.Name = "okButton";
             this.okButton.ShadowDecoration.Parent = this.okButton;
             this.okButton.Size = new System.Drawing.Size(240, 28);
-            this.okButton.TabIndex = 2;
+            this.okButton.TabIndex = 6;
             this.okButton.Text = "OK";
             this.okButton.TextTransform = Siticone.UI.WinForms.Enums.TextTransform.UpperCase;
             this.okButton.UseTransparentBackground = true;
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.BackColor = System.Drawing.Color.Transparent;
+            this.statusLabel.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.statusLabel.ForeColor = System.Drawing.Color.LightGray;
+            this.statusLabel.Location = new System.Drawing.Point(12, 9);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(160, 33);
+            this.statusLabel.TabIndex = 5;
+            this.statusLabel.Text = "Uninstalling";
             // 
             // siticoneElipse1
             // 
@@ -91,7 +91,7 @@
             // 
             this.siticoneDragControl2.TargetControl = this.statusLabel;
             // 
-            // InstallationForm
+            // UninstallationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,11 +101,11 @@
             this.Controls.Add(this.statusLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "InstallationForm";
+            this.Name = "UninstallationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Installing Spicetify";
+            this.Text = "Uninstalling";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.InstallationForm_Load);
+            this.Load += new System.EventHandler(this.UninstallationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,8 +113,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label statusLabel;
         private Siticone.UI.WinForms.SiticoneGradientButton okButton;
+        private System.Windows.Forms.Label statusLabel;
         private Siticone.UI.WinForms.SiticoneElipse siticoneElipse1;
         private System.Windows.Forms.Timer timer1;
         private Siticone.UI.WinForms.SiticoneDragControl siticoneDragControl1;

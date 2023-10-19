@@ -8,17 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Spicetify_app
+namespace Spicetify_Installer
 {
-    public partial class InstallationForm : Form
+    public partial class UninstallationForm : Form
     {
-        public event EventHandler InstallationComplete;
+        public event EventHandler UninstallationComplete;
         public Timer LoadingTimer => loadingTimer;
 
         private Timer loadingTimer;
         private int dotCount = 0;
-
-        public InstallationForm()
+        public UninstallationForm()
         {
             InitializeComponent();
             loadingTimer = new Timer();
@@ -50,22 +49,20 @@ namespace Spicetify_app
             okButton.Enabled = true;
         }
 
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            UninstallationComplete?.Invoke(this, EventArgs.Empty);
+            Application.Restart();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             dotCount = (dotCount + 1) % 5;
             string dots = new string('.', dotCount);
-            statusLabel.Text = "Installing" + dots;
-
-            
+            statusLabel.Text = "Uninstalling" + dots;
         }
 
-        private void okButton_Click(object sender, EventArgs e)
-        {
-            InstallationComplete?.Invoke(this, EventArgs.Empty);
-            Application.Restart();
-        }
-
-        private void InstallationForm_Load(object sender, EventArgs e)
+        private void UninstallationForm_Load(object sender, EventArgs e)
         {
             loadingTimer.Enabled = true;
             okButton.Enabled = false;

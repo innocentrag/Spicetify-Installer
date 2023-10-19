@@ -134,15 +134,15 @@
             // 
             // linkLabel1
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.LightGray;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Red;
+            this.linkLabel1.DisabledLinkColor = System.Drawing.Color.Black;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.ForeColor = System.Drawing.Color.Black;
+            this.linkLabel1.ForeColor = System.Drawing.Color.LightGray;
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.LinkColor = System.Drawing.Color.LightGray;
             this.linkLabel1.Location = new System.Drawing.Point(12, 236);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(40, 17);
@@ -154,15 +154,15 @@
             // 
             // linkLabel2
             // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.LightGray;
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linkLabel2.DisabledLinkColor = System.Drawing.Color.Red;
+            this.linkLabel2.DisabledLinkColor = System.Drawing.Color.Black;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.ForeColor = System.Drawing.Color.Black;
+            this.linkLabel2.ForeColor = System.Drawing.Color.LightGray;
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel2.LinkColor = System.Drawing.Color.LightGray;
             this.linkLabel2.Location = new System.Drawing.Point(57, 236);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(50, 17);
@@ -174,15 +174,15 @@
             // 
             // linkLabel3
             // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.LightGray;
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.Red;
+            this.linkLabel3.DisabledLinkColor = System.Drawing.Color.Black;
             this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel3.ForeColor = System.Drawing.Color.Black;
+            this.linkLabel3.ForeColor = System.Drawing.Color.LightGray;
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel3.LinkColor = System.Drawing.Color.LightGray;
             this.linkLabel3.Location = new System.Drawing.Point(112, 236);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(56, 17);
@@ -194,15 +194,15 @@
             // 
             // linkLabel4
             // 
-            this.linkLabel4.ActiveLinkColor = System.Drawing.Color.Black;
+            this.linkLabel4.ActiveLinkColor = System.Drawing.Color.LightGray;
             this.linkLabel4.AutoSize = true;
             this.linkLabel4.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.linkLabel4.DisabledLinkColor = System.Drawing.Color.Red;
+            this.linkLabel4.DisabledLinkColor = System.Drawing.Color.Black;
             this.linkLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel4.ForeColor = System.Drawing.Color.Black;
+            this.linkLabel4.ForeColor = System.Drawing.Color.LightGray;
             this.linkLabel4.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.linkLabel4.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel4.LinkColor = System.Drawing.Color.LightGray;
             this.linkLabel4.Location = new System.Drawing.Point(173, 236);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(49, 17);
