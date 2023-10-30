@@ -14,6 +14,9 @@ namespace Spicetify_app
 {
     public partial class Spicetify : Form
     {
+        private string installLogFilePath = "installLog.txt";
+        private string uninstallLogFilePath = "uninstallLog.txt";
+
         public Spicetify()
         {
             InitializeComponent();
@@ -41,6 +44,9 @@ namespace Spicetify_app
             installationForm.Show();
             this.Hide();
 
+            // Log the start of installation
+            File.AppendAllText(installLogFilePath, "Installation started: " + DateTime.Now + Environment.NewLine);
+
             await Task.Run(() =>
             {
                 ProcessStartInfo psi = new ProcessStartInfo
@@ -64,6 +70,10 @@ namespace Spicetify_app
                 process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.ps1 | iex");
 
                 process.StandardInput.Close();
+
+                // Log the output
+                File.AppendAllText(installLogFilePath, process.StandardOutput.ReadToEnd());
+
                 process.WaitForExit();
                 process.Close();
             });
@@ -71,6 +81,9 @@ namespace Spicetify_app
             installationForm.LoadingTimer.Enabled = false;
             installationForm.SetInstallationStatus("Success");
             installationForm.EnableOkButton();
+
+            // Log the completion of installation
+            File.AppendAllText(installLogFilePath, "Installation completed: " + DateTime.Now + Environment.NewLine);
 
             installationForm.StopTimer();
 
@@ -88,6 +101,9 @@ namespace Spicetify_app
             UninstallationForm uninstallationForm = new UninstallationForm();
             uninstallationForm.Show();
             this.Hide();
+
+            // Log the start of uninstallation
+            File.AppendAllText(uninstallLogFilePath, "Uninstallation started: " + DateTime.Now + Environment.NewLine);
 
             await Task.Run(() =>
             {
@@ -113,6 +129,10 @@ namespace Spicetify_app
                 process.StandardInput.WriteLine("Remove-Item -Path $env:LOCALAPPDATA\\spicetify -Recurse -Force");
 
                 process.StandardInput.Close();
+
+                // Log the output
+                File.AppendAllText(uninstallLogFilePath, process.StandardOutput.ReadToEnd());
+
                 process.WaitForExit();
                 process.Close();
             });
@@ -120,6 +140,9 @@ namespace Spicetify_app
             uninstallationForm.LoadingTimer.Enabled = false;
             uninstallationForm.SetInstallationStatus("Success");
             uninstallationForm.EnableOkButton();
+
+            // Log the completion of uninstallation
+            File.AppendAllText(uninstallLogFilePath, "Uninstallation completed: " + DateTime.Now + Environment.NewLine);
 
             uninstallationForm.StopTimer();
 
