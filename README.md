@@ -40,6 +40,16 @@
 
 If it doesn't install Spicetify then close the installer and then open it again and then click install button and it should correctly install. If the installer still doesn't install then try to restart your pc and then do the same steps. If you don't see marketplace on Spotify then try closing Spotify and then open it again and then you should see it.
 
+### Install button doesn't work
+
+**Fix** - Close Spicetify Installer and reopen it
+
+**Fix** - Restart computer
+
+**Fix** - Make sure Spicetify Installer is not being ran as admin
+
+**Fix** - Uninstall Spicetify Installer and Install it again using the setup file
+
 ---
 
 <img src="https://i.imgur.com/cIh7Cah.gif" alt="img" align="right" width="300px" height="225px">
@@ -52,6 +62,14 @@ If it doesn't install Spicetify then close the installer and then open it again 
 
 If you can't click Uninstall button because it says Uninstalled then this means that Spicetify is not installed.
 You can check to see if its installed at `%appdata%\spicetify` and `%localappdata%\spicetify` and if you see either one of these folders then please close Spicetify Installer and reopen it, and if you still see "Uninstalled" button then you can manually remove Spicetify by just deleting the folders at the location I gave earlier.
+
+### Uninstall button doesn't work
+
+**Fix** - close and reopen Spicetify Installer
+
+**Fix** - Spicetify is not installed
+
+**Fix** - open powershell and use `spicetify restore` and then go to `%appdata%\spicetify` and `%localappdata%\spicetify`and delete the folders if there is any
 
 ---
 
