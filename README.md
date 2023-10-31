@@ -38,9 +38,7 @@
 3. Wait for it to install
 4. Click "OK" when finished installing
 
-If it doesn't install Spicetify then close the installer and then open it again and then click install button and it should correctly install.
-If the installer still doesn't install then try to restart your pc and then do the same steps.
-If you don't see marketplace on Spotify then try closing Spotify and then open it again and then you should see it.
+If it doesn't install Spicetify then close the installer and then open it again and then click install button and it should correctly install. If the installer still doesn't install then try to restart your pc and then do the same steps. If you don't see marketplace on Spotify then try closing Spotify and then open it again and then you should see it.
 
 ---
 
