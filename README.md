@@ -3,9 +3,9 @@
 
 ---
 
-**Spicetify Installer** makes it a breeze to set up **Spicetify**. Just grab the installer, and with a simple click, you can either install it, uninstall it, or even perform updates and repairs if it's already installed. Check out my content on YouTube at [Innocent rag's YouTube](https://www.youtube.com/@innocentrag) and catch me live on Twitch at [Innocent rag's Twitch](https://www.twitch.tv/innocentrag). For more information about **Spicetify**, visit their official website [here](https://spicetify.app/).
-
 <img src="https://i.imgur.com/DhDZSZR.png" alt="img" align="right" width="335px" height="362px">
+
+**Spicetify Installer** makes it a breeze to set up **Spicetify**. Just grab the installer, and with a simple click, you can either install it, uninstall it, or even perform updates and repairs if it's already installed. Check out my content on YouTube at [Innocent rag's YouTube](https://www.youtube.com/@innocentrag) and catch me live on Twitch at [Innocent rag's Twitch](https://www.twitch.tv/innocentrag). For more information about **Spicetify**, visit their official website [here](https://spicetify.app/).
 
 ### Features
 
@@ -18,8 +18,11 @@
 - [Official Spicetify Website](https://spicetify.app)
 - [Youtube](https://www.youtube.com/@innocentrag)
 - [Twitch](https://www.twitch.tv/innocentrag)
+- [How to install Spicetify using Powershell or Spicetify Installer](https://www.youtube.com/watch?v=b73eWOkQssE&t=53s)
 
 ---
+
+<img src="https://i.imgur.com/L0qjPvJ.gif" alt="gif" align="right" width="424px" height="286px">
 
 ### How To Setup
 1. Install the latest release [here](https://github.com/innocentrag/Spicetify-Installer/releases/latest)
@@ -27,6 +30,8 @@
 3. Follow the instructions on the Setup file
 4. Open Spicetify Installer when finished
 5. Done
+
+This is for setting up the Spicetify Installer that way you can easily access Spicetify Installer just by going in search bar and searching up "Spicetify Installer" or going to your desktop and double clicking the shortct.
 
 ---
 
