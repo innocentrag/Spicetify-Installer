@@ -115,6 +115,7 @@
             this.siticoneGradientCircleButton1.ForeColor = System.Drawing.Color.White;
             this.siticoneGradientCircleButton1.HoveredState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(139)))), ((int)(((byte)(40)))));
             this.siticoneGradientCircleButton1.HoveredState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(74)))), ((int)(((byte)(61)))));
+            this.siticoneGradientCircleButton1.HoveredState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.siticoneGradientCircleButton1.HoveredState.Parent = this.siticoneGradientCircleButton1;
             this.siticoneGradientCircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("siticoneGradientCircleButton1.Image")));
             this.siticoneGradientCircleButton1.ImageSize = new System.Drawing.Size(15, 15);

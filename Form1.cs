@@ -44,10 +44,9 @@ namespace Spicetify_app
             installationForm.Show();
             this.Hide();
 
-            // Log the start of installation
             File.AppendAllText(installLogFilePath, "Installation started: " + DateTime.Now + Environment.NewLine);
 
-            await Task.Run(() =>
+            using (Process process = new Process())
             {
                 ProcessStartInfo psi = new ProcessStartInfo
                 {
@@ -59,30 +58,33 @@ namespace Spicetify_app
                     CreateNoWindow = true
                 };
 
-                Process process = new Process
+                process.OutputDataReceived += (s, args) =>
                 {
-                    StartInfo = psi
+                    if (args.Data != null)
+                    {
+                        installationForm.UpdateInstallationProgress(args.Data);
+                    }
                 };
 
+                process.StartInfo = psi;
+
                 process.Start();
+                process.BeginOutputReadLine();
 
                 process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1 | iex");
                 process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.ps1 | iex");
-
                 process.StandardInput.Close();
 
-                // Log the output
-                File.AppendAllText(installLogFilePath, process.StandardOutput.ReadToEnd());
-
-                process.WaitForExit();
-                process.Close();
-            });
+                await Task.Run(() =>
+                {
+                    process.WaitForExit();
+                });
+            }
 
             installationForm.LoadingTimer.Enabled = false;
             installationForm.SetInstallationStatus("Success");
             installationForm.EnableOkButton();
 
-            // Log the completion of installation
             File.AppendAllText(installLogFilePath, "Installation completed: " + DateTime.Now + Environment.NewLine);
 
             installationForm.StopTimer();
@@ -102,7 +104,6 @@ namespace Spicetify_app
             uninstallationForm.Show();
             this.Hide();
 
-            // Log the start of uninstallation
             File.AppendAllText(uninstallLogFilePath, "Uninstallation started: " + DateTime.Now + Environment.NewLine);
 
             await Task.Run(() =>
@@ -130,7 +131,6 @@ namespace Spicetify_app
 
                 process.StandardInput.Close();
 
-                // Log the output
                 File.AppendAllText(uninstallLogFilePath, process.StandardOutput.ReadToEnd());
 
                 process.WaitForExit();
@@ -141,7 +141,6 @@ namespace Spicetify_app
             uninstallationForm.SetInstallationStatus("Success");
             uninstallationForm.EnableOkButton();
 
-            // Log the completion of uninstallation
             File.AppendAllText(uninstallLogFilePath, "Uninstallation completed: " + DateTime.Now + Environment.NewLine);
 
             uninstallationForm.StopTimer();
