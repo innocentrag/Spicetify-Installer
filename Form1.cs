@@ -14,13 +14,28 @@ namespace Spicetify_app
 {
     public partial class Spicetify : Form
     {
-        private string installLogFilePath = "installLog.txt";
-        private string uninstallLogFilePath = "uninstallLog.txt";
+        private string installLogFilePath = Path.Combine(GetDocumentsFolderPath(), CreateDocumentFolder(), "installLog.txt");
+        private string uninstallLogFilePath = Path.Combine(GetDocumentsFolderPath(), CreateDocumentFolder(), "uninstallLog.txt");
 
+        
         public Spicetify()
         {
             InitializeComponent();
             CheckSpicetifyInstallation();
+        }
+
+        public static string GetDocumentsFolderPath()
+        {
+            string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            return documentsPath;
+        }
+
+        public static string CreateDocumentFolder() 
+        {
+            string documentsPath = GetDocumentsFolderPath();
+            string installFolder = Path.Combine(documentsPath, "Spicetify Installer");
+            Directory.CreateDirectory(installFolder);
+            return installFolder;
         }
 
         private void CheckSpicetifyInstallation()
