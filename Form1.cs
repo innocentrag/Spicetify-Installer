@@ -88,6 +88,8 @@ namespace Spicetify_app
 
                 process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1 | iex");
                 process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.ps1 | iex");
+                process.StandardInput.WriteLine("spicetify upgrade");
+                process.StandardInput.WriteLine("spicetify restore backup apply");
                 process.StandardInput.Close();
 
                 await Task.Run(() =>
