@@ -86,10 +86,19 @@ namespace Spicetify_app
                 process.Start();
                 process.BeginOutputReadLine();
 
-                process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1 | iex");
-                process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.ps1 | iex");
-                process.StandardInput.WriteLine("spicetify upgrade");
-                process.StandardInput.WriteLine("spicetify restore backup apply");
+                if (InstallBTN.Text == "Repair")
+                {
+                    process.StandardInput.WriteLine("spicetify upgrade");
+                    process.StandardInput.WriteLine("spicetify restore");
+                    process.StandardInput.WriteLine("spicetify backup");
+                    process.StandardInput.WriteLine("spicetify apply");
+                }
+                else
+                {
+                    process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.ps1 | iex");
+                    process.StandardInput.WriteLine("iwr -useb https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.ps1 | iex");
+                }
+
                 process.StandardInput.Close();
 
                 await Task.Run(() =>
