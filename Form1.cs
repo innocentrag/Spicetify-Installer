@@ -46,10 +46,18 @@ namespace Spicetify_app
             bool isInstalled = Directory.Exists(Path.Combine(appDataPath, "spicetify")) &&
                               Directory.Exists(Path.Combine(localAppDataPath, "spicetify"));
 
-            InstallBTN.Enabled = true;
-            UninstallBTN.Enabled = isInstalled;
-            InstallBTN.Text = isInstalled ? "Repair" : "Install";
+            InstallBTN.Text = isInstalled ? "Update" : "Install";
             UninstallBTN.Text = isInstalled ? "Uninstall" : "Uninstalled";
+            InstallBTN.Enabled = true;
+            if (UninstallBTN.Text == "Uninstall")
+            {
+                UninstallBTN.Enabled = true;
+            }
+            else if (UninstallBTN.Text == "Uninstalled")
+            {
+                UninstallBTN.Enabled = false;
+            }
+
         }
 
         public async void InstallBTN_Click(object sender, EventArgs e)
@@ -86,7 +94,7 @@ namespace Spicetify_app
                 process.Start();
                 process.BeginOutputReadLine();
 
-                if (InstallBTN.Text == "Repair")
+                if (InstallBTN.Text == "Update")
                 {
                     process.StandardInput.WriteLine("spicetify upgrade");
                     process.StandardInput.WriteLine("spicetify restore");
@@ -116,10 +124,11 @@ namespace Spicetify_app
             installationForm.StopTimer();
 
             installationForm.InstallationComplete += (s, args) => {
-                installationForm.Close();
                 CheckSpicetifyInstallation();
+                installationForm.Close();
                 this.Show();
                 InstallBTN.Enabled = true;
+                CheckSpicetifyInstallation();
             };
         }
 
@@ -172,10 +181,11 @@ namespace Spicetify_app
             uninstallationForm.StopTimer();
 
             uninstallationForm.UninstallationComplete += (s, args) => {
-                uninstallationForm.Close();
                 CheckSpicetifyInstallation();
+                uninstallationForm.Close();
                 this.Show();
                 UninstallBTN.Enabled = true;
+                CheckSpicetifyInstallation();
             };
         }
 

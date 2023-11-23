@@ -80,7 +80,7 @@ namespace Spicetify_app
         private void okButton_Click(object sender, EventArgs e)
         {
             InstallationComplete?.Invoke(this, EventArgs.Empty);
-            Application.Restart();
+            
         }
 
         private void InstallationForm_Load(object sender, EventArgs e)
