@@ -166,6 +166,8 @@ namespace Spicetify_app
 
                 process.StandardInput.Close();
 
+                
+
                 File.AppendAllText(uninstallLogFilePath, process.StandardOutput.ReadToEnd());
 
                 process.WaitForExit();

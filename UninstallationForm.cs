@@ -52,7 +52,7 @@ namespace Spicetify_Installer
         private void okButton_Click(object sender, EventArgs e)
         {
             UninstallationComplete?.Invoke(this, EventArgs.Empty);
-            
+            Application.Exit();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
