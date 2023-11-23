@@ -43,7 +43,7 @@
             this.okButton.BackColor = System.Drawing.Color.Transparent;
             this.okButton.BorderRadius = 5;
             this.okButton.CheckedState.Parent = this.okButton;
-            this.okButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.okButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.okButton.CustomImages.Parent = this.okButton;
             this.okButton.Enabled = false;
             this.okButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(139)))), ((int)(((byte)(40)))));

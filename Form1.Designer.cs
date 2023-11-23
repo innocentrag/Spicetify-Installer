@@ -60,7 +60,7 @@
             this.InstallBTN.BackColor = System.Drawing.Color.Transparent;
             this.InstallBTN.BorderRadius = 5;
             this.InstallBTN.CheckedState.Parent = this.InstallBTN;
-            this.InstallBTN.Cursor = System.Windows.Forms.Cursors.Default;
+            this.InstallBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InstallBTN.CustomImages.Parent = this.InstallBTN;
             this.InstallBTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(139)))), ((int)(((byte)(40)))));
             this.InstallBTN.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(74)))), ((int)(((byte)(61)))));
@@ -82,7 +82,7 @@
             this.UninstallBTN.BackColor = System.Drawing.Color.Transparent;
             this.UninstallBTN.BorderRadius = 5;
             this.UninstallBTN.CheckedState.Parent = this.UninstallBTN;
-            this.UninstallBTN.Cursor = System.Windows.Forms.Cursors.Default;
+            this.UninstallBTN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UninstallBTN.CustomImages.Parent = this.UninstallBTN;
             this.UninstallBTN.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(139)))), ((int)(((byte)(40)))));
             this.UninstallBTN.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(74)))), ((int)(((byte)(61)))));
